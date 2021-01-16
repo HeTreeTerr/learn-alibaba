@@ -1,0 +1,30 @@
+server:
+  port: 18090
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+        #同时配置file和nacos，只有nacos会生效
+        ds2:
+          nacos:
+            server-addr: localhost:8848
+            dataId: sentinel-core-example
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+  application:
+      name: sentinel-core-example
+
+#设置日志级别
+logging:
+  level:
+    com:
+      hss: info

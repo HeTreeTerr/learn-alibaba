@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "demo",
+    "count": 1,
+    "grade": 0,
+    "limitApp": "default",
+    "strategy": 0,
+    "controlBehavior": 0
+  }
+]

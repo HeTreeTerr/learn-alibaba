@@ -1,0 +1,22 @@
+server:
+  port: 18084
+spring:
+  application:
+    name: sentinel-gateway
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      scg:
+        fallback:
+          mode: response
+          response-status: 426
+          response-body: error request
+    gateway:
+      routes:
+        - id: test_route
+          uri: lb://sentinel-feign-provider
+          predicates:
+            - Path=/test/**

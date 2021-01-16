@@ -1,0 +1,22 @@
+#实例名
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    #注册中心
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+  profiles:
+    active: dev
+
+#端口号
+server:
+  port: 8085
+
+#设置日志级别
+logging:
+  level:
+    com:
+      hss: info

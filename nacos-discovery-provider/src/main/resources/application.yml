@@ -1,0 +1,23 @@
+#实例名
+spring:
+  application:
+    name: nacos-discovery-provider
+  cloud:
+  #注册中心
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # 元数据
+        metadata:
+          name: provider
+#端口号
+server:
+  port: 8082
+#  servlet:
+#    context-path: /provider
+
+#设置日志级别
+logging:
+  level:
+    com:
+      hss: info

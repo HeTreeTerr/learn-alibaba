@@ -1,0 +1,28 @@
+#实例名
+spring:
+  application:
+    name: nacos-config-client-load
+  cloud:
+    #注册中心
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
+        # 命名空间
+        namespace: 562f7e54-0a17-423b-8a2b-6a3a3433edde
+        # 分组
+        group: PIGX
+        ext-config:
+          - data-id: common.yml
+            group: PIGX
+            refresh: true
+
+#端口号
+server:
+  port: 8086
+
+#设置日志级别
+logging:
+  level:
+    com:
+      hss: info

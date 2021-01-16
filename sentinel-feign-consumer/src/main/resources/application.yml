@@ -1,0 +1,17 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: sentinel-feign-consumer
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+
+feign:
+  client:
+    config:
+      default:
+        # 尝试最长连接时间
+        connect-timeout: 10000
+        # 提供方最长运行时间
+        read-timeout: 20000
