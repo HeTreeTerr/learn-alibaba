@@ -25,3 +25,15 @@ nacos/nacos
 * http://localhost:8086/testConfig，测试配置动态更新。
 * http://localhost:8086/readCommon，测试共享配置读取。
 
+### 3.3nacos-discovery-provider
+将nacos作为服务注册中心，将自身作为提供者注册至注册中心。  
+http://localhost:8082/demo?name=hss
+
+### 3.4nacos-discovery-consumer
+将nacos作为服务注册中心，将自身作为消费者注册至注册中心。
+
+* http://localhost:8080/testBalancer?name=hss，通过loadBalancerClient远程服务调用
+* http://localhost:8080/testRibbon?name=hss，通过ribbon策略远程服务调用
+
+### 3.5nacos-discovery-consumer-feign
+todo...
