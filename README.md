@@ -9,9 +9,18 @@
 >单节点启动指令  
 进入到bin目录后，执行 startup.cmd -m standalone  
 访问地址：  
-http://localhost:8848/nacos/#/login
+http://localhost:8848/nacos/#/login  
 默认账号密码：  
 nacos/nacos
+
+* 安装sentinel
+>下载jar包后，执行
+java -jar sentinel-dashboard-1.7.0.jar --server.port=8090
+启动服务  
+访问地址：
+http://localhost:8090/  
+默认账号密码：
+sentinel/sentinel
 
 ## 3.模块介绍
 ### 3.1nacos-config-client
@@ -49,3 +58,14 @@ http://localhost:8082/demo?name=hss
 * 通过webflux直接远程调用提供者，http://localhost:8080/test?name=hss
 * 通过webflux方式，调用网关实现提供者远程调用，
 http://localhost:8080/testGateway?name=hss
+
+### 3.8sentinel-core-example
+Sentinel以流量为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务  
+的稳定性。简单的sentinel基本使用案例 
+http://localhost:18090/white  
+http://localhost:18090/black  
+
+http://localhost:18090/demo  
+http://localhost:18090/resource
+
+http://localhost:18090/param
