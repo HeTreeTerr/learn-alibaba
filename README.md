@@ -61,11 +61,16 @@ http://localhost:8080/testGateway?name=hss
 
 ### 3.8sentinel-core-example
 Sentinel以流量为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务  
-的稳定性。简单的sentinel基本使用案例 
-http://localhost:18090/white  
-http://localhost:18090/black  
 
-http://localhost:18090/demo  
-http://localhost:18090/resource
+### 3.9sentinel-feign-provider
+sentinel模块的提供者。  
+* http://localhost:18082/feign
+* http://localhost:18082/test
 
-http://localhost:18090/param
+### 3.10sentinei-feign-gateway
+sentinel模块的网关，使用gateway网关代理sentinel-feign-provider
+* http://localhost:18084/test
+
+### 3.11sentinei-feign-consumer
+sentinel模块的消费者，远程调用sentinel-feign-provider
+* http://localhost:18083/hello
