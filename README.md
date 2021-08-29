@@ -26,14 +26,26 @@ nacos/nacos
 * http://localhost:8086/readCommon，测试共享配置读取。
 
 ### 3.3nacos-discovery-provider
-将nacos作为服务注册中心，将自身作为提供者注册至注册中心。  
+将nacos作为服务注册中心，将自身注册至注册中心。  
 http://localhost:8082/demo?name=hss
 
 ### 3.4nacos-discovery-consumer
-将nacos作为服务注册中心，将自身作为消费者注册至注册中心。
+将nacos作为服务注册中心，将自身注册至注册中心。
 
 * http://localhost:8080/testBalancer?name=hss，通过loadBalancerClient远程服务调用
 * http://localhost:8080/testRibbon?name=hss，通过ribbon策略远程服务调用
 
 ### 3.5nacos-discovery-consumer-feign
-todo...
+将nacos作为服务注册中心，将自身注册至注册中心。
+* http://localhost:8080/test?name=hss，通过feign调用远程服务。
+
+### 3.6nacos-discovery-gateway-server
+将nacos作为服务注册中心，将自身注册至注册中心。  
+作为网关，反向代理nacos-discovery-provider。  
+代理后的访问地址 http://localhost:8054/provider/demo?name=hss
+
+### 3.7nacos-discovery-consumer-server
+将nacos作为服务注册中心，将自身注册至注册中心。
+* http://localhost:8080/test?name=hss，通过webflux直接远程调用提供者。
+* http://localhost:8080/testGateway?name=hss，通过webflux方式，调用
+网关实现提供者远程调用。
