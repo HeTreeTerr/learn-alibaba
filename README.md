@@ -65,6 +65,7 @@ http://localhost:8080/testGateway?name=hss
 Sentinel以流量为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务  
 * 限流测试:http://localhost:18090/demo
 * 限流测试:http://localhost:18090/resource
+* 限流测试，携带参数:http://localhost:18090/param?type=123
 * 熔断测试:http://localhost:18090/fallback?param=111
 
 ### 3.9sentinel-feign-provider
