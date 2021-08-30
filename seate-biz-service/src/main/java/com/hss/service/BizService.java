@@ -21,5 +21,9 @@ public class BizService {
         String orderResult = restTemplate.getForObject(order_url, String.class);
         String payResult = restTemplate.getForObject(pay_url, String.class);
         System.out.println("orderResult:"+orderResult+"-------------payResult="+payResult);
+
+        if(true){
+            throw new RuntimeException("我是异常！");
+        }
     }
 }

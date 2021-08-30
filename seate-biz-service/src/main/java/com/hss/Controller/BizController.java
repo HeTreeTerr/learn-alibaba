@@ -1,4 +1,4 @@
-package com.hss.Controller;
+package com.hss.controller;
 
 import com.hss.service.BizService;
 import org.springframework.beans.factory.annotation.Autowired;
