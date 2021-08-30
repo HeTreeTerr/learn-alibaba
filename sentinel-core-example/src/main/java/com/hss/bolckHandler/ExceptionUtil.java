@@ -8,10 +8,14 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 public class ExceptionUtil {
 
     public static String exHandler(BlockException ex){
-        return "exHandler error";
+        return "exHandler error--限流";
     }
 
     public static String exHandlerParam(String type, BlockException ex){
-        return "exHandler error";
+        return "exHandler error--限流";
+    }
+
+    public static String fallbackHandler(String param){
+        return "fallbackHandler error--熔断";
     }
 }
