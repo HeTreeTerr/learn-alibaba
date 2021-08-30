@@ -19,4 +19,4 @@ spring:
         - id: test_route
           uri: lb://sentinel-feign-provider
           predicates:
-            - Path=/test/**
+            - Path=/test/**,/feign/**
