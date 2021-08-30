@@ -22,6 +22,8 @@ http://localhost:8090/
 默认账号密码：
 sentinel/sentinel
 
+* 安装seate
+
 ## 3.模块介绍
 ### 3.1nacos-config-client
 将nacos作为配置中心，读取nacos中的默认命名空间、默认分组中的nacos-config-client.yml配置文件
@@ -74,3 +76,23 @@ sentinel模块的网关，使用gateway网关代理sentinel-feign-provider
 ### 3.11sentinei-feign-consumer
 sentinel模块的消费者，远程调用sentinel-feign-provider
 * http://localhost:18083/hello
+
+### 3.12seate-pay-service
+seate分布式事务解决方案工具，基本使用
+* file.conf文件中，配置seate运行中数据的持久化
+* registry.conf，配置注册自身至注册中心的规则
+* 对外暴露支付接口：http://localhost:8030/pay
+
+### 3.13seate-order-service
+seate分布式事务解决方案工具，基本使用
+* file.conf文件中，配置seate运行中数据的持久化
+* registry.conf，配置注册自身至注册中心的规则
+* 对外暴露支付接口：http://localhost:8020/order
+
+### 3.14seate-biz-service
+seate分布式事务解决方案工具，基本使用
+* file.conf文件中，配置seate运行中数据的持久化
+* registry.conf，配置注册自身至注册中心的规则
+* 对外暴露支付接口：http://localhost:8010/biz
+
+依赖@GlobalTransactional，实现先下单后支付的业务逻辑，同时保证分布式数据库事务
