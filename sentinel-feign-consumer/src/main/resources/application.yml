@@ -15,3 +15,8 @@ feign:
         connect-timeout: 10000
         # 提供方最长运行时间
         read-timeout: 20000
+#开启 hystrix 熔断
+  hystrix:
+    enabled: true
+  circuitbreaker:
+    enabled: true
