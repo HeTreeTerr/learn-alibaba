@@ -55,7 +55,7 @@ http://localhost:8082/demo?name=hss
 作为网关，反向代理nacos-discovery-provider。  
 代理后的访问地址 http://localhost:8054/provider/demo?name=hss
 
-### 3.7nacos-discovery-consumer-server
+### 3.7nacos-discovery-consumer-webflux
 将nacos作为服务注册中心，将自身注册至注册中心。
 * 通过webflux直接远程调用提供者，http://localhost:8080/test?name=hss
 * 通过webflux方式，调用网关实现提供者远程调用，
