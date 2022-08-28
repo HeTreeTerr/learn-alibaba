@@ -13,6 +13,9 @@ public class DemoProController {
 
     @GetMapping(value = "/demo")
     public String demo(@RequestParam(value = "name",required = true) String name){
+        /*if(name.length()%2 == 0){
+            throw new RuntimeException();
+        }*/
         logger.info("-------------provider-----------");
         return "hello "+name;
     }

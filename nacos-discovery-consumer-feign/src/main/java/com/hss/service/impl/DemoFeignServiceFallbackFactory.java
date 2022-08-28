@@ -9,6 +9,7 @@ public class DemoFeignServiceFallbackFactory implements FallbackFactory<DemoFeig
 
     @Override
     public DemoFeignService create(Throwable throwable) {
+
         return new DemoFeignService() {
             @Override
             public String demo(String name) {
